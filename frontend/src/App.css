@@ -227,8 +227,8 @@
         display: flex;
         position: fixed;
         bottom: 20px;
-        left: 20px;
-        right: 20px;
+        left: 16px;
+        right: 16px;
         z-index: 50;
         justify-content: center;
         align-items: center;
@@ -239,5 +239,26 @@
         font-size: 0.75rem;
         letter-spacing: 0.25em;
         border: 1px solid #ffffff;
+    }
+}
+
+@media (max-width: 640px) {
+    .architectural-grid {
+        background-size: 80px 80px;
+    }
+
+    .project-image {
+        min-height: 200px;
+    }
+
+    .project-overlay {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-sticky-cta {
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
     }
 }

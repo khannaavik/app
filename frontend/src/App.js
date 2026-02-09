@@ -172,7 +172,7 @@ const LandingPage = () => {
         style={{ "--delay": "0.05s" }}
         data-testid="main-navigation"
       >
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-10">
           <div className="flex items-center gap-3" data-testid="brand-logo">
             <div
               className="flex h-10 w-10 items-center justify-center rounded-sm bg-black text-white"
@@ -229,7 +229,7 @@ const LandingPage = () => {
           data-testid="hero-background-image"
         />
         <div className="hero-overlay" aria-hidden="true" />
-        <div className="mx-auto flex min-h-[88vh] w-full max-w-7xl flex-col justify-center gap-10 px-6 py-20 lg:flex-row lg:items-center lg:gap-24 lg:px-10">
+        <div className="mx-auto flex min-h-[80vh] w-full max-w-7xl flex-col justify-center gap-10 px-4 py-16 sm:min-h-[88vh] sm:px-6 sm:py-20 lg:flex-row lg:items-center lg:gap-24 lg:px-10">
           <div
             className="relative z-10 max-w-2xl slide-in-left"
             style={{ "--delay": "0.1s" }}
@@ -242,13 +242,13 @@ const LandingPage = () => {
               Noida · Greater Noida · Capital Excellence
             </p>
             <h1
-              className="mt-6 text-4xl font-bold uppercase leading-tight tracking-tight md:text-6xl"
+              className="mt-6 text-3xl font-bold uppercase leading-tight tracking-tight sm:text-4xl md:text-6xl"
               data-testid="hero-headline"
             >
               Building Wealth. Crafting Legacies.
             </h1>
             <p
-              className="mt-6 text-lg text-neutral-200 md:text-xl"
+              className="mt-6 text-base text-neutral-200 sm:text-lg md:text-xl"
               data-testid="hero-subhead"
             >
               SSB Group is the master builder and consultancy trusted by elite
@@ -257,7 +257,7 @@ const LandingPage = () => {
             <div className="mt-8 flex flex-wrap items-center gap-4" data-testid="hero-cta-group">
               <a
                 href="#contact"
-                className="btn-lift inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase text-black"
+                className="btn-lift inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 text-xs font-semibold uppercase text-black sm:px-6 sm:text-sm"
                 data-testid="hero-primary-cta"
               >
                 Consult the Master Investor
@@ -265,13 +265,13 @@ const LandingPage = () => {
               </a>
               <a
                 href="#projects"
-                className="btn-lift inline-flex items-center gap-3 rounded-full border border-white px-6 py-3 text-sm font-semibold uppercase"
+                className="btn-lift inline-flex items-center gap-3 rounded-full border border-white px-5 py-3 text-xs font-semibold uppercase sm:px-6 sm:text-sm"
                 data-testid="hero-secondary-cta"
               >
                 View Signature Assets
               </a>
             </div>
-            <div className="mt-10 grid gap-6 md:grid-cols-3" data-testid="hero-stats">
+            <div className="mt-10 grid gap-4 sm:grid-cols-3 sm:gap-6" data-testid="hero-stats">
               {STATS.map((stat, index) => (
                 <div
                   key={stat.label}
@@ -293,11 +293,11 @@ const LandingPage = () => {
             </div>
           </div>
           <div
-            className="relative z-10 w-full max-w-md space-y-6 slide-in-right"
+            className="relative z-10 w-full max-w-md space-y-4 sm:space-y-6 slide-in-right"
             style={{ "--delay": "0.2s" }}
             data-testid="hero-card"
           >
-            <div className="border border-white/20 bg-white/10 p-6 backdrop-blur" data-testid="hero-card-content">
+            <div className="border border-white/20 bg-white/10 p-5 sm:p-6 backdrop-blur" data-testid="hero-card-content">
               <p
                 className="text-xs uppercase tracking-[0.3em] text-neutral-200"
                 data-testid="hero-card-kicker"
@@ -319,7 +319,7 @@ const LandingPage = () => {
                 Focused on Noida & Greater Noida
               </div>
             </div>
-            <div className="border border-white/20 bg-white/10 p-6 backdrop-blur" data-testid="hero-card-secondary">
+            <div className="border border-white/20 bg-white/10 p-5 sm:p-6 backdrop-blur" data-testid="hero-card-secondary">
               <p className="text-xs uppercase tracking-[0.3em]" data-testid="hero-card-secondary-kicker">
                 Consultancy Command Center
               </p>
@@ -340,7 +340,7 @@ const LandingPage = () => {
         className="architectural-grid border-b border-neutral-200"
         data-testid="investor-section"
       >
-        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:px-10">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-16 sm:gap-12 sm:px-6 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:px-10">
           <div className="space-y-6 fade-up" style={{ "--delay": "0.05s" }} data-testid="investor-content">
             <p
               className="text-xs uppercase tracking-[0.4em] text-neutral-500"
@@ -348,7 +348,7 @@ const LandingPage = () => {
             >
               The Master Investor
             </p>
-            <h2 className="text-3xl font-bold md:text-5xl" data-testid="investor-title">
+            <h2 className="text-2xl font-bold sm:text-3xl md:text-5xl" data-testid="investor-title">
               Rajiv Malhotra
             </h2>
             <p className="text-lg text-neutral-600" data-testid="investor-subtitle">
@@ -408,7 +408,7 @@ const LandingPage = () => {
         className="bg-white"
         data-testid="consultancy-section"
       >
-        <div className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-10">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl" data-testid="consultancy-heading">
               <p
@@ -417,7 +417,7 @@ const LandingPage = () => {
               >
                 Consultancy Command Center
               </p>
-              <h2 className="mt-4 text-3xl font-bold md:text-5xl" data-testid="consultancy-title">
+              <h2 className="mt-4 text-2xl font-bold sm:text-3xl md:text-5xl" data-testid="consultancy-title">
                 Strategic Advisory for Builders & Investors.
               </h2>
             </div>
@@ -430,7 +430,7 @@ const LandingPage = () => {
             {SERVICES.map((service, index) => (
               <div
                 key={service.title}
-                className="border border-neutral-200 p-6 card-lift fade-up"
+                className="border border-neutral-200 p-5 sm:p-6 card-lift fade-up"
                 style={{ "--delay": `${0.1 + index * 0.08}s` }}
                 data-testid={`service-card-${index}`}
               >
@@ -454,13 +454,13 @@ const LandingPage = () => {
         className="architectural-grid border-y border-neutral-200"
         data-testid="projects-section"
       >
-        <div className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-10">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div data-testid="projects-heading">
               <p className="text-xs uppercase tracking-[0.4em] text-neutral-500" data-testid="projects-kicker">
                 Signature Addresses
               </p>
-              <h2 className="mt-4 text-3xl font-bold md:text-5xl" data-testid="projects-title">
+              <h2 className="mt-4 text-2xl font-bold sm:text-3xl md:text-5xl" data-testid="projects-title">
                 Architectural landmarks curated by SSB Group.
               </h2>
             </div>
@@ -518,7 +518,7 @@ const LandingPage = () => {
               </div>
             </div>
             <div
-              className="border border-neutral-200 bg-white p-6 card-lift fade-up"
+              className="border border-neutral-200 bg-white p-5 sm:p-6 card-lift fade-up"
               style={{ "--delay": "0.15s" }}
               data-testid="projects-summary"
             >
@@ -552,13 +552,13 @@ const LandingPage = () => {
       </section>
 
       <section id="profile" className="bg-white" data-testid="profile-section">
-        <div className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-10">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-            <div className="border border-neutral-200 p-8 card-lift fade-up" style={{ "--delay": "0.1s" }} data-testid="profile-card">
+            <div className="border border-neutral-200 p-6 sm:p-8 card-lift fade-up" style={{ "--delay": "0.1s" }} data-testid="profile-card">
               <p className="text-xs uppercase tracking-[0.3em] text-neutral-500" data-testid="profile-kicker">
                 Investor Profile (Dummy)
               </p>
-              <h2 className="mt-4 text-3xl font-bold" data-testid="profile-title">
+              <h2 className="mt-4 text-2xl font-bold sm:text-3xl" data-testid="profile-title">
                 Aria Capital Partners
               </h2>
               <p className="mt-3 text-sm uppercase text-neutral-500" data-testid="profile-subtitle">
@@ -630,13 +630,13 @@ const LandingPage = () => {
         className="architectural-grid border-y border-neutral-200"
         data-testid="awards-section"
       >
-        <div className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-10">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div data-testid="awards-heading">
               <p className="text-xs uppercase tracking-[0.4em] text-neutral-500" data-testid="awards-kicker">
                 Awards & Recognition
               </p>
-              <h2 className="mt-4 text-3xl font-bold md:text-5xl" data-testid="awards-title">
+              <h2 className="mt-4 text-2xl font-bold sm:text-3xl md:text-5xl" data-testid="awards-title">
                 Legacy built on precision and trust.
               </h2>
             </div>
@@ -649,7 +649,7 @@ const LandingPage = () => {
             {AWARDS.map((award, index) => (
               <div
                 key={award.title}
-                className="border border-neutral-200 bg-white p-6 card-lift fade-up"
+                className="border border-neutral-200 bg-white p-5 sm:p-6 card-lift fade-up"
                 style={{ "--delay": `${0.1 + index * 0.08}s` }}
                 data-testid={`award-card-${index}`}
               >
@@ -669,12 +669,12 @@ const LandingPage = () => {
       </section>
 
       <section id="testimonials" className="bg-white" data-testid="testimonials-section">
-        <div className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-10">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
           <div className="max-w-2xl" data-testid="testimonials-heading">
             <p className="text-xs uppercase tracking-[0.4em] text-neutral-500" data-testid="testimonials-kicker">
               Client Testimonials
             </p>
-            <h2 className="mt-4 text-3xl font-bold md:text-5xl" data-testid="testimonials-title">
+            <h2 className="mt-4 text-2xl font-bold sm:text-3xl md:text-5xl" data-testid="testimonials-title">
               The confidence of capital leaders.
             </h2>
           </div>
@@ -682,7 +682,7 @@ const LandingPage = () => {
             {TESTIMONIALS.map((testimonial, index) => (
               <div
                 key={testimonial.name}
-                className="border border-neutral-200 p-6 card-lift fade-up"
+                className="border border-neutral-200 p-5 sm:p-6 card-lift fade-up"
                 style={{ "--delay": `${0.1 + index * 0.08}s` }}
                 data-testid={`testimonial-card-${index}`}
               >
@@ -703,19 +703,19 @@ const LandingPage = () => {
       </section>
 
       <section id="contact" className="bg-black text-white" data-testid="contact-section">
-        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.1fr_1fr] lg:px-10">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-16 sm:gap-12 sm:px-6 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:px-10">
           <div className="space-y-6 fade-up" style={{ "--delay": "0.1s" }} data-testid="contact-content">
             <p className="text-xs uppercase tracking-[0.4em] text-neutral-400" data-testid="contact-kicker">
               Lead Capture
             </p>
-            <h2 className="text-3xl font-bold md:text-5xl" data-testid="contact-title">
+            <h2 className="text-2xl font-bold sm:text-3xl md:text-5xl" data-testid="contact-title">
               Secure your advisory session with the Master Investor.
             </h2>
             <p className="text-lg text-neutral-300" data-testid="contact-description">
               Share your requirements and our consultancy team will deliver a
               tailored investment roadmap within 24 hours.
             </p>
-            <div className="border border-white/20 p-6 card-lift" data-testid="contact-info-card">
+            <div className="border border-white/20 p-5 sm:p-6 card-lift" data-testid="contact-info-card">
               <p className="text-xs uppercase tracking-[0.3em] text-neutral-400" data-testid="contact-info-kicker">
                 Direct Line
               </p>
@@ -728,7 +728,7 @@ const LandingPage = () => {
             </div>
           </div>
           <form
-            className="border border-white/20 bg-white/5 p-8 fade-up"
+            className="border border-white/20 bg-white/5 p-6 sm:p-8 fade-up"
             style={{ "--delay": "0.2s" }}
             onSubmit={handleSubmit}
             data-testid="lead-form"
@@ -804,7 +804,7 @@ const LandingPage = () => {
       </section>
 
       <footer className="border-t border-neutral-200 bg-white fade-in" style={{ "--delay": "0.1s" }} data-testid="footer-section">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-start gap-6 px-6 py-10 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-start gap-6 px-4 py-8 sm:px-6 sm:py-10 lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <div data-testid="footer-brand">
             <p className="text-lg font-semibold uppercase tracking-[0.2em]" data-testid="footer-brand-name">
               SSB Group
