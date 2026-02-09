@@ -168,7 +168,8 @@ const LandingPage = () => {
   return (
     <div className="app-shell" data-testid="landing-page">
       <nav
-        className="sticky top-0 z-40 border-b border-neutral-200 bg-white/90 backdrop-blur"
+        className="sticky top-0 z-40 border-b border-neutral-200 bg-white/90 backdrop-blur fade-in"
+        style={{ "--delay": "0.05s" }}
         data-testid="main-navigation"
       >
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
@@ -229,7 +230,11 @@ const LandingPage = () => {
         />
         <div className="hero-overlay" aria-hidden="true" />
         <div className="mx-auto flex min-h-[88vh] w-full max-w-7xl flex-col justify-center gap-10 px-6 py-20 lg:flex-row lg:items-center lg:gap-24 lg:px-10">
-          <div className="relative z-10 max-w-2xl" data-testid="hero-content">
+          <div
+            className="relative z-10 max-w-2xl slide-in-left"
+            style={{ "--delay": "0.1s" }}
+            data-testid="hero-content"
+          >
             <p
               className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-300"
               data-testid="hero-kicker"
@@ -270,7 +275,8 @@ const LandingPage = () => {
               {STATS.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className="border-l border-white/20 pl-4"
+                  className="border-l border-white/20 pl-4 fade-up"
+                  style={{ "--delay": `${0.2 + index * 0.08}s` }}
                   data-testid={`hero-stat-${index}`}
                 >
                   <p className="text-2xl font-semibold text-gold" data-testid={`hero-stat-value-${index}`}>
@@ -287,7 +293,8 @@ const LandingPage = () => {
             </div>
           </div>
           <div
-            className="relative z-10 w-full max-w-md space-y-6"
+            className="relative z-10 w-full max-w-md space-y-6 slide-in-right"
+            style={{ "--delay": "0.2s" }}
             data-testid="hero-card"
           >
             <div className="border border-white/20 bg-white/10 p-6 backdrop-blur" data-testid="hero-card-content">
@@ -334,7 +341,7 @@ const LandingPage = () => {
         data-testid="investor-section"
       >
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:px-10">
-          <div className="space-y-6" data-testid="investor-content">
+          <div className="space-y-6 fade-up" style={{ "--delay": "0.05s" }} data-testid="investor-content">
             <p
               className="text-xs uppercase tracking-[0.4em] text-neutral-500"
               data-testid="investor-kicker"
@@ -374,7 +381,7 @@ const LandingPage = () => {
               wealth.”
             </blockquote>
           </div>
-          <div className="relative" data-testid="investor-image-wrapper">
+          <div className="relative fade-up" style={{ "--delay": "0.15s" }} data-testid="investor-image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1758518727984-17b37f2f0562?crop=entropy&cs=srgb&fm=jpg&q=85"
               alt="Master Investor portrait"
@@ -423,7 +430,8 @@ const LandingPage = () => {
             {SERVICES.map((service, index) => (
               <div
                 key={service.title}
-                className="border border-neutral-200 p-6"
+                className="border border-neutral-200 p-6 card-lift fade-up"
+                style={{ "--delay": `${0.1 + index * 0.08}s` }}
                 data-testid={`service-card-${index}`}
               >
                 <div className="flex items-center gap-3" data-testid={`service-card-header-${index}`}>
@@ -463,7 +471,11 @@ const LandingPage = () => {
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]" data-testid="projects-grid">
             <div className="grid gap-6" data-testid="projects-primary">
-              <div className="project-card" data-testid={PROJECTS[0].testid}>
+              <div
+                className="project-card card-lift fade-up"
+                style={{ "--delay": "0.1s" }}
+                data-testid={PROJECTS[0].testid}
+              >
                 <img
                   src={PROJECTS[0].image}
                   alt={PROJECTS[0].title}
@@ -480,8 +492,13 @@ const LandingPage = () => {
                 </div>
               </div>
               <div className="grid gap-6 md:grid-cols-2" data-testid="projects-secondary-row">
-                {PROJECTS.slice(1).map((project) => (
-                  <div className="project-card" key={project.title} data-testid={project.testid}>
+                {PROJECTS.slice(1).map((project, index) => (
+                  <div
+                    className="project-card card-lift fade-up"
+                    style={{ "--delay": `${0.18 + index * 0.08}s` }}
+                    key={project.title}
+                    data-testid={project.testid}
+                  >
                     <img
                       src={project.image}
                       alt={project.title}
@@ -500,7 +517,11 @@ const LandingPage = () => {
                 ))}
               </div>
             </div>
-            <div className="border border-neutral-200 bg-white p-6" data-testid="projects-summary">
+            <div
+              className="border border-neutral-200 bg-white p-6 card-lift fade-up"
+              style={{ "--delay": "0.15s" }}
+              data-testid="projects-summary"
+            >
               <p className="text-xs uppercase tracking-[0.3em] text-neutral-500" data-testid="projects-summary-kicker">
                 Investment Signal
               </p>
@@ -533,7 +554,7 @@ const LandingPage = () => {
       <section id="profile" className="bg-white" data-testid="profile-section">
         <div className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-            <div className="border border-neutral-200 p-8" data-testid="profile-card">
+            <div className="border border-neutral-200 p-8 card-lift fade-up" style={{ "--delay": "0.1s" }} data-testid="profile-card">
               <p className="text-xs uppercase tracking-[0.3em] text-neutral-500" data-testid="profile-kicker">
                 Investor Profile (Dummy)
               </p>
@@ -566,7 +587,7 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <div className="space-y-6" data-testid="profile-details">
+            <div className="space-y-6 fade-up" style={{ "--delay": "0.2s" }} data-testid="profile-details">
               <p className="text-xs uppercase tracking-[0.4em] text-neutral-500" data-testid="profile-details-kicker">
                 Consultancy Alignment
               </p>
@@ -626,7 +647,12 @@ const LandingPage = () => {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3" data-testid="awards-grid">
             {AWARDS.map((award, index) => (
-              <div key={award.title} className="border border-neutral-200 bg-white p-6" data-testid={`award-card-${index}`}>
+              <div
+                key={award.title}
+                className="border border-neutral-200 bg-white p-6 card-lift fade-up"
+                style={{ "--delay": `${0.1 + index * 0.08}s` }}
+                data-testid={`award-card-${index}`}
+              >
                 <p className="text-sm font-semibold text-gold" data-testid={`award-year-${index}`}>
                   {award.year}
                 </p>
@@ -656,7 +682,8 @@ const LandingPage = () => {
             {TESTIMONIALS.map((testimonial, index) => (
               <div
                 key={testimonial.name}
-                className="border border-neutral-200 p-6"
+                className="border border-neutral-200 p-6 card-lift fade-up"
+                style={{ "--delay": `${0.1 + index * 0.08}s` }}
                 data-testid={`testimonial-card-${index}`}
               >
                 <Quote className="h-6 w-6 text-gold-solid" data-testid={`testimonial-icon-${index}`} />
@@ -677,7 +704,7 @@ const LandingPage = () => {
 
       <section id="contact" className="bg-black text-white" data-testid="contact-section">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.1fr_1fr] lg:px-10">
-          <div className="space-y-6" data-testid="contact-content">
+          <div className="space-y-6 fade-up" style={{ "--delay": "0.1s" }} data-testid="contact-content">
             <p className="text-xs uppercase tracking-[0.4em] text-neutral-400" data-testid="contact-kicker">
               Lead Capture
             </p>
@@ -688,7 +715,7 @@ const LandingPage = () => {
               Share your requirements and our consultancy team will deliver a
               tailored investment roadmap within 24 hours.
             </p>
-            <div className="border border-white/20 p-6" data-testid="contact-info-card">
+            <div className="border border-white/20 p-6 card-lift" data-testid="contact-info-card">
               <p className="text-xs uppercase tracking-[0.3em] text-neutral-400" data-testid="contact-info-kicker">
                 Direct Line
               </p>
@@ -701,7 +728,8 @@ const LandingPage = () => {
             </div>
           </div>
           <form
-            className="border border-white/20 bg-white/5 p-8"
+            className="border border-white/20 bg-white/5 p-8 fade-up"
+            style={{ "--delay": "0.2s" }}
             onSubmit={handleSubmit}
             data-testid="lead-form"
           >
@@ -775,7 +803,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <footer className="border-t border-neutral-200 bg-white" data-testid="footer-section">
+      <footer className="border-t border-neutral-200 bg-white fade-in" style={{ "--delay": "0.1s" }} data-testid="footer-section">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-start gap-6 px-6 py-10 lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <div data-testid="footer-brand">
             <p className="text-lg font-semibold uppercase tracking-[0.2em]" data-testid="footer-brand-name">
@@ -810,7 +838,8 @@ const LandingPage = () => {
 
       <a
         href="#contact"
-        className="mobile-sticky-cta btn-lift"
+        className="mobile-sticky-cta btn-lift fade-in"
+        style={{ "--delay": "0.3s" }}
         data-testid="mobile-sticky-cta"
       >
         Get Expert Advice
