@@ -427,7 +427,7 @@ const LandingPage = () => {
                 data-testid={`service-card-${index}`}
               >
                 <div className="flex items-center gap-3" data-testid={`service-card-header-${index}`}>
-                  <TrendingUp className="h-5 w-5 text-gold" />
+                  <TrendingUp className="h-5 w-5 text-gold-solid" />
                   <h3 className="text-lg font-semibold" data-testid={`service-card-title-${index}`}>
                     {service.title}
                   </h3>
@@ -513,15 +513,15 @@ const LandingPage = () => {
               </p>
               <ul className="mt-6 space-y-4 text-sm text-neutral-700" data-testid="projects-summary-list">
                 <li className="flex items-center gap-3" data-testid="projects-summary-item-1">
-                  <Award className="h-4 w-4 text-gold" />
+                  <Award className="h-4 w-4 text-gold-solid" />
                   Pre-launch access for top-tier developments
                 </li>
                 <li className="flex items-center gap-3" data-testid="projects-summary-item-2">
-                  <Award className="h-4 w-4 text-gold" />
+                  <Award className="h-4 w-4 text-gold-solid" />
                   Concierge leasing for institutional tenants
                 </li>
                 <li className="flex items-center gap-3" data-testid="projects-summary-item-3">
-                  <Award className="h-4 w-4 text-gold" />
+                  <Award className="h-4 w-4 text-gold-solid" />
                   End-to-end compliance and title assurance
                 </li>
               </ul>
@@ -620,7 +620,7 @@ const LandingPage = () => {
               </h2>
             </div>
             <div className="flex items-center gap-3 text-sm uppercase text-neutral-600" data-testid="awards-highlight">
-              <Award className="h-4 w-4 text-gold" />
+              <Award className="h-4 w-4 text-gold-solid" />
               Elite honors across NCR
             </div>
           </div>
@@ -659,7 +659,7 @@ const LandingPage = () => {
                 className="border border-neutral-200 p-6"
                 data-testid={`testimonial-card-${index}`}
               >
-                <Quote className="h-6 w-6 text-gold" data-testid={`testimonial-icon-${index}`} />
+                <Quote className="h-6 w-6 text-gold-solid" data-testid={`testimonial-icon-${index}`} />
                 <p className="mt-4 text-sm italic text-neutral-700 accent-font" data-testid={`testimonial-quote-${index}`}>
                   “{testimonial.quote}”
                 </p>
