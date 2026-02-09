@@ -1,0 +1,120 @@
+{
+  "brand_identity": {
+    "name": "SSB Group",
+    "archetype": "The Architect & The Visionary",
+    "tone": "Bold, Architectural, Trustworthy, Elite",
+    "visual_style": "Swiss Luxury",
+    "core_values": ["Precision", "Legacy", "Wealth Creation"]
+  },
+  "design_system": {
+    "colors": {
+      "primary": "#0A0A0A",
+      "secondary": "#F3F4F6",
+      "accent": "#C5A059",
+      "background": "#FFFFFF",
+      "text_primary": "#0A0A0A",
+      "text_secondary": "#4B5563",
+      "border": "#E5E7EB",
+      "success": "#10B981",
+      "error": "#EF4444"
+    },
+    "typography": {
+      "headings": {
+        "font_family": "Syne, sans-serif",
+        "weights": ["700", "800"],
+        "letter_spacing": "-0.02em",
+        "transform": "uppercase"
+      },
+      "body": {
+        "font_family": "Manrope, sans-serif",
+        "weights": ["400", "500"],
+        "line_height": "1.6"
+      },
+      "accents": {
+        "font_family": "Playfair Display, serif",
+        "usage": "Testimonials, Quotes, 'Master Investor' title"
+      }
+    },
+    "spacing": {
+      "container_padding": "p-6 md:p-12 lg:p-24",
+      "section_gap": "gap-16 md:gap-32",
+      "element_gap": "gap-4 md:gap-8"
+    },
+    "radius": {
+      "default": "rounded-none",
+      "buttons": "rounded-full",
+      "cards": "rounded-sm"
+    },
+    "shadows": {
+      "card": "shadow-[0_4px_20px_rgba(0,0,0,0.05)]",
+      "hover": "shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1579283987703-5ae978f95ace?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "investor_profile": "https://images.unsplash.com/photo-1758518727984-17b37f2f0562?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "interior_luxury": "https://images.unsplash.com/photo-1758448511320-05d7d28f4298?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "project_exterior": "https://images.unsplash.com/photo-1709450574205-a0cd8912a919?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "construction_detail": "https://images.unsplash.com/photo-1557836973-d56094d20104?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "preferred_icons": ["Building2", "TrendingUp", "Award", "Phone", "ArrowRight", "MapPin", "Quote"]
+    }
+  },
+  "layout_rules": {
+    "grid_system": "Bento Grid (Asymmetric)",
+    "container_width": "max-w-7xl mx-auto",
+    "alignment": "Left aligned text for readability, Centered headings for impact sections only",
+    "mobile_strategy": "Stack vertically, reduce padding, ensure touch targets > 44px"
+  },
+  "components": {
+    "hero_section": {
+      "type": "Split Screen / Parallax",
+      "elements": ["Headline: 'Building Wealth, Crafting Legacies'", "Subhead: 'Noida's Premier Real Estate Consultancy'", "CTA: 'Consult the Master Investor'", "Background Image: hero_bg"]
+    },
+    "master_investor_card": {
+      "type": "Profile Card",
+      "style": "High Contrast, Magazine Style",
+      "elements": ["Image: investor_profile", "Name: 'Rajiv Malhotra'", "Title: 'The Master Investor'", "Stats: '15+ Years', '₹500Cr+ Managed'", "Quote: 'Real estate is not just land; it is the foundation of your future wealth.'"]
+    },
+    "consultancy_services": {
+      "type": "List / Grid",
+      "style": "Minimalist Swiss List",
+      "items": ["Portfolio Management", "Commercial Leasing", "High-Yield Assets", "Legal Advisory"]
+    },
+    "lead_capture_form": {
+      "type": "Sticky / Embedded",
+      "style": "Clean, High Contrast Input Fields",
+      "fields": ["Name", "Email", "Phone Number"],
+      "cta_text": "Get Expert Advice"
+    },
+    "projects_gallery": {
+      "type": "Masonry / Bento",
+      "images": ["interior_luxury", "project_exterior", "construction_detail"]
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "entrance": "Fade Up with Stagger",
+    "hover": "Scale 1.02 + Shadow Lift",
+    "scroll": "Parallax on images"
+  },
+  "instructions_to_main_agent": [
+    "Use 'Syne' font for all headings (H1-H3). Import from Google Fonts.",
+    "Use 'Manrope' for body text.",
+    "Implement a 'Sticky' Lead Capture button on mobile.",
+    "Ensure the 'Master Investor' section feels like a premium editorial feature.",
+    "Use the provided Unsplash URLs for images. DO NOT use placeholders.",
+    "Add 'data-testid' to all buttons and inputs.",
+    "The 'Phone CTA' must be prominent in the nav and footer.",
+    "Use a 'Gold/Bronze' gradient text effect for key numbers or awards."
+  ],
+  "universal_guidelines": [
+    "Do not use generic gradients. Use solid, bold colors.",
+    "Ensure high contrast for accessibility.",
+    "Use 2x more whitespace than you think is necessary.",
+    "Micro-interactions on every button hover are mandatory."
+  ]
+}
